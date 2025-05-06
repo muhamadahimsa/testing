@@ -1,0 +1,360 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --primary: #ffffff;
+  --secondary: #000000;
+}
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  background-color: #ffffff;
+  font-family: "Host Grotesk", sans-serif;
+  color: #000000;
+}
+img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+  transform: translateY(0) scale(1.5);
+}
+a{
+  text-decoration: none;
+}
+.ofh{
+  overflow: hidden;
+}
+
+/* Nav */
+nav {
+  position: fixed;
+  bottom: .75rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 100;
+}
+.nav-contact {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  mix-blend-mode: difference;
+}
+.nav-contact span {
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.5;
+  color: var(--primary);
+}
+.nav-contact a {
+  color: var(--primary);
+  line-height: 1;
+  transition: .3s all ease-out;
+}
+.nav-contact a:hover{
+  opacity: .5;
+}
+.nav-wrapper {
+  backdrop-filter: blur(64px);
+  background-color: rgba(57, 57, 57, .3);
+  width: 20rem;
+  height: 3rem;
+  padding: 0.6rem;
+  z-index: 1;
+}
+.nav-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 31.5rem;
+  width: 20rem;
+  z-index: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+.nav-pages {
+  display: flex;
+  flex-direction: column;
+}
+.nav-page {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-page .ofh p {
+  position: absolute;
+  top: 0%;
+  height: 41.5px;
+  width: 100%;
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: -0.05rem;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  transition: color 0.25s;
+  color: var(--primary);
+}
+.nav-page .ofh {
+  overflow: hidden;
+  position: relative;
+  height: 45.5px;
+  width: 100%;
+  font-size: 14px;
+}
+.nav-page .ofh p:nth-child(2) {
+  top: 100%;
+  color: var(--primary);
+}
+.nav-pages:hover .ofh p:nth-child(1) {
+  color: rgb(111, 111, 111);
+}
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.nav-links .ofh {
+  line-height: 1.1;
+}
+.nav-links a {
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 16px;
+  width: fit-content;
+  transition: all 0.3s ease-out;
+}
+.nav-links a:hover {
+  color: #b4b4b498;
+}
+.nav-bottom {
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  height: 3rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+i {
+  position: relative;
+  color: var(--primary);
+  top: 2px;
+}
+.nav-titles {
+  padding: 0.2rem 0.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 23px;
+  width: 90px;
+  overflow: hidden;
+}
+.nav-titles span {
+  color: var(--primary);
+  position: absolute;
+  letter-spacing: -0.01rem;
+  top: 0%;
+  height: 16px;
+}
+.nav-titles span:nth-child(2),
+.nav-titles span:nth-child(3),
+.nav-titles span:nth-child(4) {
+  top: 100%;
+}
+.nav-button {
+  padding: 0.2rem 1.5rem;
+  display: flex;
+  gap: 5px;
+}
+.nav-button span {
+  color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 0%;
+  height: 16px;
+}
+.nav-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 16px;
+  width: 41px;
+  overflow: hidden;
+  position: relative;
+}
+.nav-button-wrapper span:nth-child(2) {
+  top: 100%;
+}
+
+/* Work */
+.container{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+.project-list{
+  position: absolute;
+  width: 100%;
+  will-change: transform;
+  list-style: none;
+}
+.project-template{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  will-change: transform;
+}
+.side{
+  display: flex;
+  overflow: hidden;
+}
+.side-img{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.side-desc{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 100vw;
+  z-index: 1;
+}
+.img{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+h1{
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -.0125rem;
+  padding: .5rem;
+  color: var(--primary);
+}
+
+.title p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--primary);
+  text-align: end;
+}
+.cursor{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-transform: uppercase;
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  pointer-events: none;
+  z-index: 2;
+  backdrop-filter: blur(64px);
+  background-color: rgba(57, 57, 57, .3);
+  padding: .5rem .85rem .5rem 1.75rem;
+}
+.cursor p{
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -0.001rem;
+  text-transform:  capitalize;
+  color: var(--primary);
+}
+.cursor p::before{
+  content: '';
+  width: 9px;
+  height: 9px;
+  background: var(--primary);
+  position: absolute;
+  left: .75rem;
+  top: .9rem;
+
+  /* animation: clip 1.5s infinite; */
+}
+@keyframes clip {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+/* Media */
+@media screen and (max-width: 1440px) {
+  .title p:nth-child(2){
+    display: none;
+  }
+  .title h1:nth-child(4){
+    display: none;
+  }
+  .title p:nth-child(3){
+    width: 13rem;
+  }
+  .cursor{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 769px){
+  .nav-contact{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 530px){
+  nav{
+    bottom: 1rem;
+  }
+  .nav-wrapper{
+    width: 17.5rem;
+  }
+  .nav-top{
+    width: 17.5rem;
+    padding: 1rem;
+    height: 25rem;
+  }
+  .nav-page .ofh p {
+    height: 36.5px;
+    font-size: 40px;
+  }
+  .nav-page .ofh {
+    height: 40.5px;
+  }
+  
+  .title p:nth-child(3){
+    width: 10rem;
+    text-align: justify;
+  }
+}
