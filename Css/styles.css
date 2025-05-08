@@ -1,0 +1,152 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: #ffffff;
+  --secondary: #000000;
+  --alternate: #91bcc3;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100svh;
+
+  background-color: var(--secondary);
+  font-family: "Host Grotesk", sans-serif;
+  color: var(--primary);
+  /* touch-action: none;
+  user-select: none; */
+}
+::-webkit-scrollbar {
+  display: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  will-change: transform;
+}
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+.ofh {
+  overflow: hidden;
+}
+h1{
+  position: relative;
+  color: var(--primary);
+  font-size: 10rem;
+  font-weight: 700;
+  letter-spacing: -0.4rem;
+  line-height: 1.5;
+  will-change: transform;
+}
+p{
+  color: var(--primary);
+  /* font-size: 1.25rem; */
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem 4rem;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+.nav-items{
+  display: flex;
+  gap: 1rem;
+}
+.logo a{
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -.06rem;
+  font-size: 1.65rem;
+}
+section{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+  overflow: hidden;
+}
+.slide,
+.slide-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slide{
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5rem;
+}
+.slide-img img{
+  position: relative;
+  transform: scale(1.25);
+  will-change: transform;
+}
+.slide-copy{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  will-change: transform;
+  z-index: 0;
+}
+.slide-tag{
+  padding: 0 4rem;
+}
+.slide-marquee{
+  width: 100%;
+  overflow: hidden;
+}
+.marquee-container{
+  width: 1000%;
+}
+.carousel-progress{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  z-index: 2;
+}
+.progress-bar{
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, .2);
+}
+.progress-bar::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  transform-origin: center left;
+  transform: scaleX(var(--progress, 0));
+  will-change: transform;
+}
